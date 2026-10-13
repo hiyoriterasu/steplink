@@ -15,6 +15,7 @@
     .grad-bg {
       background: linear-gradient(135deg, #34d399 0%, #0ea5e9 100%);
     }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
@@ -25,97 +26,176 @@
       <div class="text-2xl font-bold text-slate-800 tracking-tight">
         Step<span class="text-emerald-500">Link</span>
       </div>
-      <a href="https://lin.ee/oBMLe1qp" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-md">
-        <i class="fab fa-line mr-1"></i> LINEで申し込む
+      <nav class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
+        <a href="#features" class="hover:text-emerald-500 transition">特徴</a>
+        <a href="#pricing" class="hover:text-emerald-500 transition">料金プラン</a>
+        <a href="#warranty" class="hover:text-emerald-500 transition">ツナグ保証</a>
+        <a href="#flow" class="hover:text-emerald-500 transition">ご利用の流れ</a>
+      </nav>
+      <a href="https://lin.ee/oBMLe1qp" class="bg-[#06C755] hover:bg-[#05b34c] text-white px-5 py-2 rounded-full text-sm font-bold transition shadow-md">
+        <i class="fab fa-line mr-1"></i> LINEで審査へ
       </a>
     </div>
   </header>
 
   <!-- ヒーローセクション -->
   <section class="bg-slate-900 text-white pt-20 pb-24 px-4 text-center">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+    <div class="max-w-4xl mx-auto">
+      <span class="inline-block bg-emerald-500/20 text-emerald-400 text-sm font-bold px-4 py-1 rounded-full mb-6">クレジットカード不要・自社独自のスマート審査</span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
         審査に縛られない、<br>新しいスマホの選び方。
       </h1>
-      <p class="text-slate-300 text-lg mb-10">
-        キャリアの長期縛りや、過去の信用情報にとらわれない。<br>
-        頭金と定額の月々払いで、憧れの最新端末をスマートに手元へ。
+      <p class="text-slate-300 text-lg md:text-xl mb-10 leading-relaxed">
+        過去の信用情報ではなく、"今"のあなたを評価する自社分割プログラム。<br class="hidden md:block">
+        初期費用（頭金）と定額の月々払いで、安心の保証付き端末をすぐにお届けします。
       </p>
-      <a href="https://lin.ee/oBMLe1qp" class="inline-block grad-bg hover:opacity-90 text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg transition transform hover:scale-105">
-        <i class="fab fa-line mr-2"></i> 無料のLINE審査に進む
+      <a href="https://lin.ee/oBMLe1qp" class="inline-block bg-[#06C755] hover:bg-[#05b34c] text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg transition transform hover:scale-105">
+        <i class="fab fa-line mr-2"></i> 無料のLINE審査を始める
       </a>
     </div>
   </section>
 
-  <!-- 選ばれる理由 -->
-  <section class="py-20 px-4 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-16">Step Link が選ばれる <span class="grad-text">3つの理由</span></h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+  <!-- お悩みセクション -->
+  <section class="py-16 bg-emerald-50 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 text-slate-800">こんなお悩み、Step Linkが解決します</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+          <i class="fas fa-credit-card text-3xl text-emerald-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">クレカを持っていない</h3>
+          <p class="text-slate-600 text-sm">クレジットカードがなくても、銀行振込でお支払いが可能です。</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+          <i class="fas fa-file-signature text-3xl text-emerald-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">他社の審査に通らない</h3>
+          <p class="text-slate-600 text-sm">過去の信用機関のデータにとらわれない、独自の柔軟な基準で審査を行います。</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+          <i class="fas fa-tools text-3xl text-emerald-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">中古端末の故障が不安</h3>
+          <p class="text-slate-600 text-sm">全端末に独自の「ツナグ保証」が付帯。万が一の故障や破損時もしっかりサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金・機種例セクション -->
+  <section id="pricing" class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">取り扱い機種と料金の目安</h2>
+      <p class="text-slate-600">月々のお支払いには「端末代金」と「ツナグ保証料」がすべて含まれています。<br>※記載は一例です。仕入れ状況やストレージ容量により変動する場合があります。</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- プラン1 -->
+      <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+        <div class="bg-slate-100 p-6 text-center border-b border-slate-200">
+          <h3 class="text-2xl font-bold text-slate-800">iPhone 12 <span class="text-sm font-normal text-slate-500">(64GB)</span></h3>
+          <p class="text-sm text-emerald-600 font-semibold mt-1">コスパ重視のスタンダードモデル</p>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4 pb-4 border-b border-dashed border-slate-300">
+            <span class="font-bold text-slate-600">契約時 頭金</span>
+            <span class="text-xl font-bold text-slate-800">10,000<span class="text-sm font-normal">円 (税込)</span></span>
+          </div>
+          <div class="flex justify-between items-center mb-6">
+            <span class="font-bold text-slate-600">月々のお支払い <br><span class="text-xs text-slate-400">（端末代＋ツナグ保証料込 / 24回）</span></span>
+            <span class="text-3xl font-extrabold text-emerald-500">4,500<span class="text-base font-bold text-slate-800">円〜</span></span>
+          </div>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li><i class="fas fa-check text-emerald-500 w-5"></i> 厳選リファービッシュ品（クリーニング済）</li>
+            <li><i class="fas fa-check text-emerald-500 w-5"></i> ツナグ保証プログラム標準付帯</li>
+            <li><i class="fas fa-check text-emerald-500 w-5"></i> MDMセキュリティ導入済</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- プラン2 -->
+      <div class="bg-white rounded-2xl shadow-md border-2 border-emerald-400 relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">一番人気</div>
+        <div class="bg-emerald-50 p-6 text-center border-b border-emerald-100">
+          <h3 class="text-2xl font-bold text-slate-800">iPhone 13 <span class="text-sm font-normal text-slate-500">(128GB)</span></h3>
+          <p class="text-sm text-emerald-600 font-semibold mt-1">カメラも性能も妥協しない快適モデル</p>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4 pb-4 border-b border-dashed border-slate-300">
+            <span class="font-bold text-slate-600">契約時 頭金</span>
+            <span class="text-xl font-bold text-slate-800">15,000<span class="text-sm font-normal">円 (税込)</span></span>
+          </div>
+          <div class="flex justify-between items-center mb-6">
+            <span class="font-bold text-slate-600">月々のお支払い <br><span class="text-xs text-slate-400">（端末代＋ツナグ保証料込 / 24回）</span></span>
+            <span class="text-3xl font-extrabold text-emerald-500">6,500<span class="text-base font-bold text-slate-800">円〜</span></span>
+          </div>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li><i class="fas fa-check text-emerald-500 w-5"></i> 厳選リファービッシュ品（クリーニング済）</li>
+            <li><i class="fas fa-check text-emerald-500 w-5"></i> ツナグ保証プログラム標準付帯</li>
+            <li><i class="fas fa-check text-emerald-500 w-5"></i> MDMセキュリティ導入済</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm text-slate-500 mt-6">※上記以外のiPhoneモデル（14, 15など）やAndroid端末もご用意可能な場合があります。LINEよりお気軽にご相談ください。</p>
+  </section>
+
+  <!-- ツナグ保証セクション -->
+  <section id="warranty" class="py-20 bg-slate-800 text-white px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">独自の安心サポート「ツナグ保証」</h2>
+        <p class="text-slate-300 leading-relaxed">
+          中古スマホの「もしも」の不安を取り除くため、分割期間中は保証プログラムが標準付帯します。<br>
+          画面割れや水没など、思わぬトラブルの際も少ない自己負担で修理・交換が可能です。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-slate-700 p-6 rounded-xl border border-slate-600">
+          <i class="fas fa-car-crash text-2xl text-emerald-400 mb-3"></i>
+          <h4 class="font-bold mb-2">画面割れ・破損</h4>
+          <p class="text-sm text-slate-300">うっかり落として画面が割れてしまった場合も、所定の自己負担金のみで修理や同等品への交換対応を行います。</p>
+        </div>
+        <div class="bg-slate-700 p-6 rounded-xl border border-slate-600">
+          <i class="fas fa-tint text-2xl text-emerald-400 mb-3"></i>
+          <h4 class="font-bold mb-2">水没・自然故障</h4>
+          <p class="text-sm text-slate-300">水濡れによる起動不可や、カメラが映らない等の予期せぬ故障にも対応。安心して日々お使いいただけます。</p>
+        </div>
+        <div class="bg-slate-700 p-6 rounded-xl border border-slate-600">
+          <i class="fas fa-infinity text-2xl text-emerald-400 mb-3"></i>
+          <h4 class="font-bold mb-2">完済後も継続サポート</h4>
+          <p class="text-sm text-slate-300">分割代金の完済後も、少額の月額定額プランとして保証をそのまま継続可能。大切な端末を長く守り続けます。</p>
+        </div>
+      </div>
+      <div class="mt-8 bg-slate-900 p-6 rounded-xl border border-slate-700 text-sm text-slate-400">
+        <p class="mb-2"><strong class="text-slate-200">【保証利用時の免責事項・注意事項】</strong></p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>保証適用による修理・交換時には、機種に応じた「お客様自己負担金（免責金）」が発生いたします。</li>
+          <li>紛失・盗難は保証の対象外となります。</li>
+          <li>月々のお支払いが滞納状態（2ヶ月連続）となった場合、本保証は自動的に失効いたしますのでご注意ください。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MDM・セキュリティに関するご案内 -->
+  <section class="py-16 bg-white px-4">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2">
+        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Security" class="rounded-2xl shadow-lg">
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-bold mb-4">公正なお取引のための<br>スマートセキュリティ管理</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          当店では、独自の審査でプログラムをご提供するにあたり、不正転売の防止および端末保全のため、分割期間中の対象端末に<strong>デバイス管理システム（MDM）</strong>を導入しております。<br><br>
+          万が一、お支払いの遅延が発生し、ご連絡がつかない場合には、一時的に端末の利用を制限（画面ロック）させていただく機能が含まれています。<br>
+          分割代金がすべて完済された段階で、MDMプロファイルは完全に解除され、お客様の完全な所有物として通常のSIMフリー端末同様にお使いいただけます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ご利用の流れ -->
+  <section id="flow" class="py-20 bg-slate-50 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">お申し込みからお届けまで</h2>
       
-      <!-- 理由1 -->
-      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
-        <div class="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mb-6">
-          <i class="fas fa-user-check"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-4">独自基準のスマート審査</h3>
-        <p class="text-slate-600 text-sm text-left">
-          信販会社を通さない完全自社審査。過去の信用情報（CIC等）にとらわれず、現在のライフスタイルやお仕事の状況を第一に評価し、スピーディにお迎えします。
-        </p>
-      </div>
-
-      <!-- 理由2 -->
-      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
-        <div class="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mb-6">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-4">安心のセキュリティ＆保証</h3>
-        <p class="text-slate-600 text-sm text-left">
-          デバイス紛失・不正利用を防ぐ最新セキュリティを導入。また、完済後も安心の「ツナグ保証プログラム」で、長く大切に端末をお使いいただけます。
-        </p>
-      </div>
-
-      <!-- 理由3 -->
-      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
-        <div class="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mb-6">
-          <i class="fas fa-mobile-alt"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-4">高品質リファービッシュ</h3>
-        <p class="text-slate-600 text-sm text-left">
-          専門スタッフによる徹底した動作テスト・データ消去・クリーニングを経た厳選端末のみをお届け。届いたその日から快適にご利用いただけます。
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTAセクション -->
-  <section class="bg-slate-100 py-16 px-4 text-center">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="text-2xl font-bold mb-6">まずはLINEでお気軽にご相談ください</h2>
-      <p class="text-slate-600 mb-8">希望の機種やプランについて、スタッフが丁寧にご案内いたします。</p>
-      <a href="https://lin.ee/oBMLe1qp" class="inline-block bg-[#06C755] hover:bg-[#05b34c] text-white text-lg font-bold px-12 py-4 rounded-full shadow-lg transition">
-        <i class="fab fa-line mr-2 text-xl"></i> 友だち追加して審査に進む
-      </a>
-    </div>
-  </section>
-
-  <!-- フッター -->
-  <footer class="bg-slate-900 text-slate-400 py-12 text-sm border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <div class="mb-6 md:mb-0 text-center md:text-left">
-        <div class="text-2xl font-bold text-white tracking-tight mb-2">Step<span class="text-emerald-500">Link</span></div>
-        <p>スマート分割プログラム</p>
-      </div>
-      <div class="flex flex-col md:flex-row gap-6 text-center">
-        <a href="terms.html" class="hover:text-white transition">重要事項説明書・利用規約</a>
-        <a href="privacy.html" class="hover:text-white transition">プライバシーポリシー</a>
-        <a href="mailto:steplink.mobile@gmail.com" class="hover:text-white transition"><i class="far fa-envelope mr-1"></i> steplink.mobile@gmail.com</a>
-      </div>
-    </div>
-    <div class="max-w-6xl mx-auto px-4 mt-8 pt-8 border-t border-slate-800 text-center text-slate-500">
-      &copy; 2024 Step Link. All rights reserved.
-    </div>
-  </footer>
-
-</body>
-</html>
+      <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-
