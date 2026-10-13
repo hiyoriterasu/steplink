@@ -18,125 +18,96 @@
     </div>
   </header>
 
-  <main class="max-w-2xl mx-auto px-4 py-12">
+  <main class="max-w-3xl mx-auto px-4 py-12">
     <div class="text-center mb-10">
       <h1 class="text-2xl md:text-3xl font-black text-slate-900 mb-3">審査お申し込みフォーム</h1>
-      <p class="text-slate-600 text-sm">以下のフォームに必要事項をご入力の上、送信してください。<br>スタッフが確認次第、LINEまたはメールにてご連絡いたします。</p>
+      <p class="text-slate-600 text-sm">以下の規約をご確認の上、お申し込みへお進みください。</p>
     </div>
 
-    <!-- フォーム部分 -->
-    <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
+    <div class="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-200">
       
-      <!-- ▼ action="ここにGoogleフォームのURLを入れます" -->
-      <form id="customForm" action="https://docs.google.com/forms/u/0/d/e/XXXXXXXXXXXXX/formResponse" method="POST" class="space-y-6">
+      <!-- ステップ1：規約への同意エリア（HTML側で制御） -->
+      <div id="agreementSection" class="mb-8">
+        <h2 class="text-lg font-bold text-slate-800 border-b-2 border-emerald-500 pb-2 mb-4">1. 利用規約への同意</h2>
+        <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+          お申し込みを進めるには、当店の利用規約およびプライバシーポリシーへの同意が必要です。必ず以下のリンク先をご確認ください。
+        </p>
         
-        <!-- お名前 -->
-        <div>
-          <label class="block text-sm font-bold text-slate-700 mb-2">お名前（フルネーム） <span class="text-xs text-red-500 ml-1">必須</span></label>
-          <!-- ▼ name="entry.XXXXX" を書き換えます -->
-          <input type="text" name="entry.123456789" required placeholder="例：山田 太郎" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition bg-slate-50 focus:bg-white">
-        </div>
+        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 mb-6">
+          <ul class="space-y-3 mb-6">
+            <li>
+              <a href="https://terraso01.github.io/steplink/terms.html" target="_blank" class="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-bold text-sm md:text-base hover:underline transition">
+                <i class="fas fa-external-link-alt"></i> 重要事項説明書・割賦販売利用規約
+              </a>
+            </li>
+            <li>
+              <a href="https://terraso01.github.io/steplink/privacy.html" target="_blank" class="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-bold text-sm md:text-base hover:underline transition">
+                <i class="fas fa-external-link-alt"></i> 個人情報保護方針
+              </a>
+            </li>
+          </ul>
 
-        <!-- ご連絡先（LINE名または電話番号） -->
-        <div>
-          <label class="block text-sm font-bold text-slate-700 mb-2">ご連絡先（電話番号） <span class="text-xs text-red-500 ml-1">必須</span></label>
-          <input type="tel" name="entry.234567890" required placeholder="例：090-1234-5678" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition bg-slate-50 focus:bg-white">
-        </div>
-
-        <!-- 希望機種 -->
-        <div>
-          <label class="block text-sm font-bold text-slate-700 mb-2">ご希望の機種 <span class="text-xs text-slate-400 ml-1">任意</span></label>
-          <div class="relative">
-            <select name="entry.345678901" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition bg-slate-50 focus:bg-white appearance-none">
-              <option value="">まだ決まっていない・相談したい</option>
-              <option value="iPhone 13">iPhone 13</option>
-              <option value="iPhone 12">iPhone 12</option>
-              <option value="iPhone SE3">iPhone SE (第3世代)</option>
-              <option value="その他">その他（Androidなど）</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
-              <i class="fas fa-chevron-down text-sm"></i>
-            </div>
-          </div>
-        </div>
-
-        <hr class="border-slate-200 my-8">
-
-        <!-- 同意チェックボックス -->
-        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-          <p class="text-xs text-slate-600 mb-4 leading-relaxed">
-            お申し込みを進めるには、当店の利用規約およびプライバシーポリシーへの同意が必要です。必ずリンク先をご確認ください。
-          </p>
           <label class="flex items-start gap-3 cursor-pointer group">
             <div class="relative flex items-center justify-center mt-0.5">
-              <input type="checkbox" required class="peer appearance-none w-5 h-5 border-2 border-slate-300 rounded focus:ring-2 focus:ring-emerald-200 checked:bg-emerald-500 checked:border-emerald-500 transition cursor-pointer">
-              <i class="fas fa-check absolute text-white text-xs opacity-0 peer-checked:opacity-100 pointer-events-none"></i>
+              <input type="checkbox" id="agreeCheckbox" class="peer appearance-none w-6 h-6 border-2 border-slate-300 rounded focus:ring-2 focus:ring-emerald-200 checked:bg-emerald-500 checked:border-emerald-500 transition cursor-pointer">
+              <i class="fas fa-check absolute text-white text-sm opacity-0 peer-checked:opacity-100 pointer-events-none"></i>
             </div>
-            <div class="text-sm font-bold text-slate-700 leading-tight">
-              <a href="https://terraso01.github.io/steplink/terms.html" target="_blank" class="text-emerald-600 hover:underline">重要事項説明書・割賦販売利用規約</a> および <a href="https://terraso01.github.io/steplink/privacy.html" target="_blank" class="text-emerald-600 hover:underline">個人情報保護方針</a> に同意します。
+            <div class="text-base font-bold text-slate-800 leading-tight">
+              上記の規約と方針を確認し、内容に同意します。
             </div>
           </label>
         </div>
+      </div>
 
-        <!-- 送信ボタン -->
-        <div class="pt-4">
-          <button type="submit" id="submitBtn" class="w-full bg-[#06C755] hover:bg-[#05b34c] text-white text-lg font-bold py-4 rounded-xl shadow-md transition flex justify-center items-center gap-2">
-            <span>上記に同意して送信する</span>
-          </button>
+      <!-- ステップ2：Googleフォーム（初期状態は隠れている） -->
+      <div id="googleFormSection" class="hidden opacity-0 transition-opacity duration-500 ease-in-out">
+        <h2 class="text-lg font-bold text-slate-800 border-b-2 border-emerald-500 pb-2 mb-4">2. お客様情報の入力</h2>
+        
+        <!-- ▼ iframeの src="..." をご自身のGoogleフォームのURLに書き換えてください ▼ -->
+        <div class="w-full relative rounded-xl overflow-hidden bg-slate-50" style="height: 800px;">
+          <!-- スピナー（読み込み中） -->
+          <div class="absolute inset-0 flex items-center justify-center text-slate-400">
+            <i class="fas fa-spinner fa-spin text-3xl"></i>
+          </div>
+          <!-- フォーム本体 -->
+          <iframe 
+            src="https://docs.google.com/forms/d/e/XXXXXXXXXXXXXXXXXXXXXXXX/viewform?embedded=true" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+            class="relative z-10">
+            読み込み中…
+          </iframe>
         </div>
-
-      </form>
-
-      <!-- 送信完了メッセージ（初期状態は非表示） -->
-      <div id="successMessage" class="hidden text-center py-10">
-        <div class="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-          <i class="fas fa-check"></i>
-        </div>
-        <h2 class="text-2xl font-black text-slate-900 mb-3">送信が完了しました</h2>
-        <p class="text-slate-600 text-sm mb-8 leading-relaxed">
-          お申し込みありがとうございます。<br>
-          内容を確認の上、スタッフよりご連絡いたしますので今しばらくお待ちください。
-        </p>
-        <a href="index.html" class="inline-block bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-8 py-3 rounded-full transition">
-          トップページへ戻る
-        </a>
       </div>
 
     </div>
   </main>
 
-  <!-- Googleフォームへ裏側で送信するためのスクリプト -->
   <script>
-    document.getElementById('customForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // 画面遷移をブロック
-      
-      const form = this;
-      const submitBtn = document.getElementById('submitBtn');
-      const successMessage = document.getElementById('successMessage');
-      
-      // 送信中ボタンのアニメーション
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
-      submitBtn.disabled = true;
-      submitBtn.classList.add('opacity-70');
+    // チェックボックスのON/OFFでGoogleフォームの表示を切り替えるスクリプト
+    const checkbox = document.getElementById('agreeCheckbox');
+    const formSection = document.getElementById('googleFormSection');
 
-      // データをGoogleフォームに裏で投げる
-      fetch(form.action, {
-        method: form.method,
-        mode: 'no-cors', // これによりCORSエラーを回避しつつ送信だけ行う
-        body: new FormData(form)
-      })
-      .then(() => {
-        // 送信完了したらフォームを隠して完了メッセージを表示
-        form.classList.add('hidden');
-        successMessage.classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      })
-      .catch(error => {
-        alert('送信に失敗しました。時間をおいて再度お試しください。');
-        submitBtn.innerHTML = '上記に同意して送信する';
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('opacity-70');
-      });
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        // チェックされたらフォームを表示
+        formSection.classList.remove('hidden');
+        // 少し遅らせてフェードインさせる
+        setTimeout(() => {
+          formSection.classList.remove('opacity-0');
+          formSection.classList.add('opacity-100');
+        }, 50);
+      } else {
+        // チェックが外れたらフォームを隠す
+        formSection.classList.remove('opacity-100');
+        formSection.classList.add('opacity-0');
+        setTimeout(() => {
+          formSection.classList.add('hidden');
+        }, 500);
+      }
     });
   </script>
 
