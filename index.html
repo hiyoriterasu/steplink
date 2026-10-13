@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step Link（ステップリンク） | スマホの自社分割・自社割賦販売</title>
+  <meta name="description" content="クレカ不要・審査不安でも安心のスマホ自社分割販売「Step Link（ステップリンク）」。頭金5,000円から、最短即日発送。独自審査であなた専用の分割プランをご提案します。">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              deep: '#0f172a',
+            },
+            accent: {
+              500: '#10b981',
+              600: '#059669',
+            },
+            line: '#06C755',
+            lineDark: '#05a847',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* アニメーションとカスタムスタイル */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+    }
+    .hero-gradient {
+      background: radial-gradient(circle at 80% 20%, rgba(2, 132, 199, 0.08) 0%, rgba(255, 255, 255, 0) 60%),
+                  radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.06) 0%, rgba(255, 255, 255, 0) 50%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans pb-24 md:pb-0">
+
+  <!-- ヘッダー -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-slate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight text-slate-900 leading-none">Step Link</span>
+          <span class="text-[10px] text-slate-500 font-medium tracking-wider mt-0.5">ステップリンク | 自社分割スマホ</span>
+        </div>
+      </a>
+
+      <!-- ナビゲーション（PC） -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#features" class="hover:text-brand-600 transition-colors">選ばれる理由</a>
+        <a href="#plans" class="hover:text-brand-600 transition-colors">端末・料金</a>
+        <a href="#flow" class="hover:text-brand-600 transition-colors">お申込みの流れ</a>
+        <a href="#warranty" class="hover:text-brand-600 transition-colors">ツナグ保証</a>
+        <a href="#faq" class="hover:text-brand-600 transition-colors">よくある質問</a>
+      </nav>
+
+      <!-- LINE CTA ボタン -->
+      <div class="flex items-center gap-3">
+        <a href="#line-cta" class="inline-flex items-center gap-2 bg-line hover:bg-lineDark text-white px-4 py-2 rounded-full font-bold text-sm shadow-sm transition-all hover:shadow hover:scale-102">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349.002.63.284.63.631 0 .346-.281.628-.63.63H4.635A.632.632 0 0 1 4 10.494c0-.347.281-.629.635-.631h14.73zM12 2C6.477 2 2 6.03 2 11c0 3.12 1.776 5.882 4.49 7.426.195.111.316.322.316.547l-.15 2.112c-.035.496.486.85.918.625l3.245-1.687a1.05 1.05 0 0 1 .496-.124c.228 0 .454.025.685.025 5.523 0 10-4.03 10-9 0-4.97-4.477-9-10-9z"/>
+          </svg>
+          <span class="hidden sm:inline">LINEで無料審査</span>
+          <span class="sm:hidden">LINE相談</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="pt-28 pb-16 md:pt-36 md:pb-24 hero-gradient relative overflow-hidden border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <!-- バッジ -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold mb-6 badge-glow">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          クレカ不要・審査通過率 90%以上の独自割賦プラン
+        </div>
+
+        <!-- キャッチコピー -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight sm:leading-tight mb-6">
+          諦めていたスマホを、<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">あなた専用の自社分割</span>で。
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 font-medium leading-relaxed mb-8 max-w-2xl mx-auto">
+          大手キャリアの審査落ち・金融ブラック・クレカ未所持でも大丈夫。<br class="hidden sm:inline">
+          Step Link独自の安心審査で、高品質なiPhoneを月々5,000円からお届けします。
+        </p>
+
+        <!-- メインCTA -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <a href="#line-cta" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-line hover:bg-lineDark text-white px-8 py-4 rounded-2xl font-extrabold text-lg shadow-lg shadow-emerald-500/20 hover:scale-102 transition-all">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.477 2 2 6.03 2 11c0 3.12 1.776 5.882 4.49 7.426.195.111.316.322.316.547l-.15 2.112c-.035.496.486.85.918.625l3.245-1.687a1.05 1.05 0 0 1 .496-.124c.228 0 .454.025.685.025 5.523 0 10-4.03 10-9 0-4.97-4.477-9-10-9z"/>
+            </svg>
+            <span>公式LINEで仮審査・在庫確認</span>
+          </a>
+          <a href="#plans" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 px-6 py-4 rounded-2xl font-bold text-base transition-colors shadow-sm">
+            <span>取扱端末・料金を見る</span>
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 3大メリットタグ -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-6 border-t border-slate-200/80 text-left sm:text-center">
+          <div class="p-2 sm:p-3 rounded-xl bg-white/60 border border-slate-200">
+            <div class="text-xs sm:text-sm text-slate-500 font-bold">頭金</div>
+            <div class="text-sm sm:text-xl font-black text-slate-900 mt-0.5">5,000円〜</div>
+          </div>
+          <div class="p-2 sm:p-3 rounded-xl bg-white/60 border border-slate-200">
+            <div class="text-xs sm:text-sm text-slate-500 font-bold">審査スピード</div>
+            <div class="text-sm sm:text-xl font-black text-slate-900 mt-0.5">最短30分</div>
+          </div>
+          <div class="p-2 sm:p-3 rounded-xl bg-white/60 border border-slate-200">
+            <div class="text-xs sm:text-sm text-slate-500 font-bold">発送</div>
+            <div class="text-sm sm:text-xl font-black text-slate-900 mt-0.5">即日対応可</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 選ばれる理由（3つの安心） -->
+  <section id="features" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-600 mb-2">WHY STEP LINK</h2>
+        <p class="text-2xl sm:text-4xl font-extrabold text-slate-900">Step Linkが選ばれる3つの安心理由</p>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">信用情報機関を通さない独自審査だから、他社で断られた方でもスマホをお持ちいただけます。</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- 理由1 -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200 relative group hover:border-brand-500 transition-all hover:shadow-lg">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-5 font-black text-xl group-hover:bg-brand-600 group-hover:text-white transition-colors">
+            01
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">信用情報（CIC等）不問の独自審査</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            過去の延滞歴や債務整理、クレジットカードの有無は関係ありません。現在のお支払い能力と身元確認に基づき、自社独自の基準で迅速に審査いたします。
+          </p>
+        </div>
+
+        <!-- 理由2 -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200 relative group hover:border-brand-500 transition-all hover:shadow-lg">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-5 font-black text-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            02
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">ツナグ保証で故障時も安心</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            中古スマホでも安心の専用アフターサポートを完備。万が一の画面割れや水没・自然故障時も、少額の自己負担のみで修理・同等端末交換に対応します。
+          </p>
+        </div>
+
+        <!-- 理由3 -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200 relative group hover:border-brand-500 transition-all hover:shadow-lg">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mb-5 font-black text-xl group-hover:bg-sky-600 group-hover:text-white transition-colors">
+            03
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">完済後はそのまま自分の端末に</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            リース契約ではなく「分割売買」のため、契約回数（5〜6回）を完済した時点で端末の所有権はお客様へ完全移転。管理ロックも即座に解除されます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 取扱端末＆料金プラン -->
+  <section id="plans" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-600 mb-2">PLANS & DEVICES</h2>
+        <p class="text-2xl sm:text-4xl font-extrabold text-slate-900">取扱端末ラインナップ・分割料金</p>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">全端末クリーニング・動作チェック済み。頭金と月額割賦で無理なくご利用いただけます。</p>
+      </div>
+
+      <!-- カテゴリフィルタータブ -->
+      <div class="flex items-center justify-center gap-2 mb-10 overflow-x-auto pb-2" id="filter-tabs">
+        <button onclick="filterDevices('all')" class="tab-btn active px-4 py-2 rounded-full text-sm font-bold bg-slate-900 text-white shadow-sm transition-all" data-category="all">
+          すべて表示
+        </button>
+        <button onclick="filterDevices('popular')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-600 hover:bg-slate-200 border border-slate-200 transition-all" data-category="popular">
+          人気・標準モデル
+        </button>
+        <button onclick="filterDevices('entry')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-600 hover:bg-slate-200 border border-slate-200 transition-all" data-category="entry">
+          手軽な低価格帯
+        </button>
+        <button onclick="filterDevices('pro')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-600 hover:bg-slate-200 border border-slate-200 transition-all" data-category="pro">
+          Pro・ハイスペック
+        </button>
+      </div>
+
+      <!-- 端末グリッド -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="device-container">
+        
+        <!-- iPhone 11 -->
+        <div class="device-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="entry">
+          <div class="p-6 border-b border-slate-100 flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-500 uppercase">審査目安: ランクC〜</span>
+              <span class="text-xs font-extrabold px-2.5 py-1 rounded bg-slate-100 text-slate-700">一番手軽</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 11</h3>
+            <p class="text-xs text-slate-500 mb-5">日常使いに十分なデュアルカメラ搭載</p>
+
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl mb-4 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">頭金（契約時）</span>
+                <span class="font-bold text-slate-900">¥6,000</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">月々のお支払い</span>
+                <span class="font-extrabold text-brand-600 text-lg">¥5,000 <span class="text-xs font-normal text-slate-500">/月 (6回)</span></span>
+              </div>
+              <div class="border-t border-slate-200 pt-2 flex justify-between items-center text-xs">
+                <span class="text-slate-500">支払総額</span>
+                <span class="font-bold text-slate-700">¥36,000</span>
+              </div>
+            </div>
+
+            <div class="text-xs text-slate-500 space-y-1">
+              <div class="flex justify-between">
+                <span>ツナグ保証料:</span>
+                <span class="font-semibold text-slate-700">¥500 /月</span>
+              </div>
+              <div class="flex justify-between">
+                <span>修理時自己負担額:</span>
+                <span class="font-semibold text-slate-700">¥5,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-50 border-t border-slate-100">
+            <a href="#line-cta" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-brand-600 text-white py-2.5 rounded-xl font-bold text-sm transition-colors">
+              この機種で申し込む
+            </a>
+          </div>
+        </div>
+
+        <!-- iPhone 12 -->
+        <div class="device-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="entry popular">
+          <div class="p-6 border-b border-slate-100 flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-500 uppercase">審査目安: ランクB/C</span>
+              <span class="text-xs font-extrabold px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">5G対応</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 12</h3>
+            <p class="text-xs text-slate-500 mb-5">高精細OLED画面＆スクエアデザイン</p>
+
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl mb-4 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">頭金（契約時）</span>
+                <span class="font-bold text-slate-900">¥10,000</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">月々のお支払い</span>
+                <span class="font-extrabold text-brand-600 text-lg">¥10,000 <span class="text-xs font-normal text-slate-500">/月 (5回)</span></span>
+              </div>
+              <div class="border-t border-slate-200 pt-2 flex justify-between items-center text-xs">
+                <span class="text-slate-500">支払総額</span>
+                <span class="font-bold text-slate-700">¥60,000</span>
+              </div>
+            </div>
+
+            <div class="text-xs text-slate-500 space-y-1">
+              <div class="flex justify-between">
+                <span>ツナグ保証料:</span>
+                <span class="font-semibold text-slate-700">¥500 /月</span>
+              </div>
+              <div class="flex justify-between">
+                <span>修理時自己負担額:</span>
+                <span class="font-semibold text-slate-700">¥5,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-50 border-t border-slate-100">
+            <a href="#line-cta" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-brand-600 text-white py-2.5 rounded-xl font-bold text-sm transition-colors">
+              この機種で申し込む
+            </a>
+          </div>
+        </div>
+
+        <!-- iPhone 13 (人気No.1) -->
+        <div class="device-card bg-white rounded-2xl border-2 border-brand-500 overflow-hidden shadow-md hover:shadow-lg transition-all flex flex-col relative" data-category="popular">
+          <div class="bg-gradient-to-r from-brand-600 to-accent-600 text-white text-center py-1 text-xs font-black tracking-wider">
+            ★ 一番人気・おすすめモデル
+          </div>
+          <div class="p-6 border-b border-slate-100 flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-brand-600 uppercase">審査目安: ランクA〜</span>
+              <span class="text-xs font-extrabold px-2.5 py-1 rounded bg-brand-50 text-brand-700">バッテリー長持ち</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 13</h3>
+            <p class="text-xs text-slate-500 mb-5">高性能A15チップ・映画のような動画撮影</p>
+
+            <div class="space-y-3 bg-brand-50/50 p-4 rounded-xl mb-4 text-sm border border-brand-100">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">頭金（契約時）</span>
+                <span class="font-bold text-slate-900">¥12,000</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">月々のお支払い</span>
+                <span class="font-extrabold text-brand-600 text-xl">¥12,000 <span class="text-xs font-normal text-slate-500">/月 (5回)</span></span>
+              </div>
+              <div class="border-t border-slate-200/80 pt-2 flex justify-between items-center text-xs">
+                <span class="text-slate-500">支払総額</span>
+                <span class="font-bold text-slate-700">¥72,000</span>
+              </div>
+            </div>
+
+            <div class="text-xs text-slate-500 space-y-1">
+              <div class="flex justify-between">
+                <span>ツナグ保証料:</span>
+                <span class="font-semibold text-slate-700">¥1,000 /月</span>
+              </div>
+              <div class="flex justify-between">
+                <span>修理時自己負担額:</span>
+                <span class="font-semibold text-slate-700">¥10,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-brand-50/30 border-t border-slate-100">
+            <a href="#line-cta" class="w-full inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-800 text-white py-2.5 rounded-xl font-extrabold text-sm transition-colors shadow">
+              この機種で申し込む
+            </a>
+          </div>
+        </div>
+
+        <!-- iPhone 14 -->
+        <div class="device-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="popular">
+          <div class="p-6 border-b border-slate-100 flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-500 uppercase">審査目安: ランクA〜</span>
+              <span class="text-xs font-extrabold px-2.5 py-1 rounded bg-sky-100 text-sky-800">高画質アクション</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 14</h3>
+            <p class="text-xs text-slate-500 mb-5">衝突事故検出など最新の安全機能搭載</p>
+
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl mb-4 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">頭金（契約時）</span>
+                <span class="font-bold text-slate-900">¥20,000</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">月々のお支払い</span>
+                <span class="font-extrabold text-brand-600 text-lg">¥16,000 <span class="text-xs font-normal text-slate-500">/月 (5回)</span></span>
+              </div>
+              <div class="border-t border-slate-200 pt-2 flex justify-between items-center text-xs">
+                <span class="text-slate-500">支払総額</span>
+                <span class="font-bold text-slate-700">¥100,000</span>
+              </div>
+            </div>
+
+            <div class="text-xs text-slate-500 space-y-1">
+              <div class="flex justify-between">
+                <span>ツナグ保証料:</span>
+                <span class="font-semibold text-slate-700">¥1,000 /月</span>
+              </div>
+              <div class="flex justify-between">
+                <span>修理時自己負担額:</span>
+                <span class="font-semibold text-slate-700">¥10,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-50 border-t border-slate-100">
+            <a href="#line-cta" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-brand-600 text-white py-2.5 rounded-xl font-bold text-sm transition-colors">
+              この機種で申し込む
+            </a>
+          </div>
+        </div>
+
+        <!-- iPhone 14 Pro -->
+        <div class="device-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="pro">
+          <div class="p-6 border-b border-slate-100 flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-purple-600 uppercase">審査目安: ランクS</span>
+              <span class="text-xs font-extrabold px-2.5 py-1 rounded bg-purple-100 text-purple-800">Dynamic Island</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 14 Pro</h3>
+            <p class="text-xs text-slate-500 mb-5">常時表示ディスプレイ＆48MPプロカメラ</p>
+
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl mb-4 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">頭金（契約時）</span>
+                <span class="font-bold text-slate-900">¥35,000</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">月々のお支払い</span>
+                <span class="font-extrabold text-brand-600 text-lg">¥20,000 <span class="text-xs font-normal text-slate-500">/月 (5回)</span></span>
+              </div>
+              <div class="border-t border-slate-200 pt-2 flex justify-between items-center text-xs">
+                <span class="text-slate-500">支払総額</span>
+                <span class="font-bold text-slate-700">¥135,000</span>
+              </div>
+            </div>
+
+            <div class="text-xs text-slate-500 space-y-1">
+              <div class="flex justify-between">
+                <span>ツナグ保証料:</span>
+                <span class="font-semibold text-slate-700">¥2,000 /月</span>
+              </div>
+              <div class="flex justify-between">
+                <span>修理時自己負担額:</span>
+                <span class="font-semibold text-slate-700">¥20,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-50 border-t border-slate-100">
+            <a href="#line-cta" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-brand-600 text-white py-2.5 rounded-xl font-bold text-sm transition-colors">
+              この機種で申し込む
+            </a>
+          </div>
+        </div>
+
+        <!-- iPhone 15 -->
+        <div class="device-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="popular pro">
+          <div class="p-6 border-b border-slate-100 flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-purple-600 uppercase">審査目安: ランクS</span>
+              <span class="text-xs font-extrabold px-2.5 py-1 rounded bg-amber-100 text-amber-800">USB-C端子</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 15</h3>
+            <p class="text-xs text-slate-500 mb-5">待望のType-C対応＆進化したカメラ性能</p>
+
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl mb-4 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">頭金（契約時）</span>
+                <span class="font-bold text-slate-900">¥35,000</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">月々のお支払い</span>
+                <span class="font-extrabold text-brand-600 text-lg">¥20,000 <span class="text-xs font-normal text-slate-500">/月 (5回)</span></span>
+              </div>
+              <div class="border-t border-slate-200 pt-2 flex justify-between items-center text-xs">
+                <span class="text-slate-500">支払総額</span>
+                <span class="font-bold text-slate-700">¥135,000</span>
+              </div>
+            </div>
+
+            <div class="text-xs text-slate-500 space-y-1">
+              <div class="flex justify-between">
+                <span>ツナグ保証料:</span>
+                <span class="font-semibold text-slate-700">¥2,000 /月</span>
+              </div>
+              <div class="flex justify-between">
+                <span>修理時自己負担額:</span>
+                <span class="font-semibold text-slate-700">¥20,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-50 border-t border-slate-100">
+            <a href="#line-cta" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-brand-600 text-white py-2.5 rounded-xl font-bold text-sm transition-colors">
+              この機種で申し込む
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="text-center text-xs text-slate-500 mt-8">
+        ※在庫状況や端末のストレージ（容量）により、頭金や割賦金額が若干前後する場合がございます。最新在庫はLINEでお問い合わせください。
+      </p>
+    </div>
+  </section>
+
+  <!-- お申込みの流れ -->
+  <section id="flow" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-600 mb-2">APPLICATION FLOW</h2>
+        <p class="text-2xl sm:text-4xl font-extrabold text-slate-900">かんたん4ステップでお届け</p>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">ご来店不要。LINEとお手持ちのスマホだけで最短即日審査が完了します。</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-lg flex items-center justify-center mb-4 shadow">
+            1
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">LINE友だち追加</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            まずは公式LINEを追加。「審査希望」または希望機種をメッセージでお送りください。
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-lg flex items-center justify-center mb-4 shadow">
+            2
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">フォーム入力・審査</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            ご案内するフォームに身分証を添付して送信。最短30分で自社審査結果をお伝えします。
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-lg flex items-center justify-center mb-4 shadow">
+            3
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">頭金のお支払い</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            契約内容を確認し、指定の頭金をお支払い（銀行振込・店頭等）いただきます。
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
+          <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-black text-lg flex items-center justify-center mb-4 shadow">
+            4
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">端末発送・利用開始</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            送料無料で即日〜翌日発送。端末到着後、すぐにお手持ちのSIMを挿してご利用いただけます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ツナグ保証について -->
+  <section id="warranty" class="py-16 md:py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold mb-4">
+            あんしんサポート
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black tracking-tight leading-tight mb-6">
+            分割中も完済後も。<br>
+            「ツナグ保証」でずっと安心。
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+            中古スマホの分割販売だからこそ、トラブルへの備えを徹底しています。画面割れや水没など予期せぬ故障時も、少額の自己負担額（¥5,000〜）で修理・代替交換いたします。
+          </p>
+
+          <div class="space-y-4 text-sm">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <div>
+                <strong class="text-white block font-bold">完済後はMDM管理を即時解除</strong>
+                <span class="text-slate-400 text-xs">分割金の支払いが終わった時点で端末の所有権はお客様のものになります。</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <div>
+                <strong class="text-white block font-bold">完済後も月額保証の継続OK</strong>
+                <span class="text-slate-400 text-xs">端末代完済後も、AppleCare代わりに月額保証だけを継続サブスクとしてご利用いただけます。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 p-6 sm:p-8 rounded-2xl border border-slate-700">
+          <h3 class="text-lg font-bold text-white mb-4 border-b border-slate-700 pb-3">保証内容と自己負担額の目安</h3>
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div class="flex justify-between items-center py-2 border-b border-slate-700/60">
+              <span class="text-slate-300">iPhone 11 / 12</span>
+              <span class="font-bold text-white">保証料 ¥500/月（自己負担 ¥5,000）</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-700/60">
+              <span class="text-slate-300">iPhone 13 / 14</span>
+              <span class="font-bold text-white">保証料 ¥1,000/月（自己負担 ¥10,000）</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-700/60">
+              <span class="text-slate-300">Proシリーズ / 15全種</span>
+              <span class="font-bold text-white">保証料 ¥2,000/月（自己負担 ¥20,000）</span>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-4 leading-normal">
+            ※故意による破損や紛失は対象外となります。完済後の保証料未払い時は1ヶ月目で停止、2ヶ月連続で自動解約となります。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問（FAQ） -->
+  <section id="faq" class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-600 mb-2">FAQ</h2>
+        <p class="text-2xl sm:text-4xl font-extrabold text-slate-900">よくあるご質問</p>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">お申込み前に気になる疑問にお答えします。</p>
+      </div>
+
+      <div class="space-y-4" id="faq-accordion">
+        
+        <!-- Q1 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center faq-toggle" onclick="toggleFaq(this)">
+            <span>金融ブラックや他社の滞納があっても契約できますか？</span>
+            <span class="text-xl font-light text-slate-400 transition-transform duration-200 faq-icon">+</span>
+          </button>
+          <div class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/50 pt-3 bg-white">
+            はい、問題ございません。Step LinkではCIC等の信用情報機関への照会を行わず、現在のお客様の就業状況や身元情報をもとに独自の基準で審査を行っております。過去に他社で分割を断られた方も多数ご契約いただいています。
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center faq-toggle" onclick="toggleFaq(this)">
+            <span>申込みに必要な書類は何ですか？</span>
+            <span class="text-xl font-light text-slate-400 transition-transform duration-200 faq-icon">+</span>
+          </button>
+          <div class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/50 pt-3 bg-white">
+            ① 顔写真付きの身分証明書（運転免許証・マイナンバーカード・在留カードのいずれか）と、② ご本人様が身分証を持ったセルフィー写真が必要です。現住所が異なる場合は直近3ヶ月以内の公共料金領収書をご用意いただきます。
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center faq-toggle" onclick="toggleFaq(this)">
+            <span>クレジットカードがなくても支払えますか？</span>
+            <span class="text-xl font-light text-slate-400 transition-transform duration-200 faq-icon">+</span>
+          </button>
+          <div class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/50 pt-3 bg-white">
+            はい、クレジットカードは不要です。頭金および毎月の割賦金は、銀行振込または口座振替にてお支払いいただけます。
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center faq-toggle" onclick="toggleFaq(this)">
+            <span>途中で一括返済することはできますか？</span>
+            <span class="text-xl font-light text-slate-400 transition-transform duration-200 faq-icon">+</span>
+          </button>
+          <div class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/50 pt-3 bg-white">
+            はい、可能です。残りの分割代金を一括でお支払いいただくことで、前倒しで完済し所有権を移転（管理ロック解除）させることができます。
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center faq-toggle" onclick="toggleFaq(this)">
+            <span>端末を完済した後はどうなりますか？</span>
+            <span class="text-xl font-light text-slate-400 transition-transform duration-200 faq-icon">+</span>
+          </button>
+          <div class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/50 pt-3 bg-white">
+            所定の回数（5〜6回）を完済された時点で、端末の所有権はお客様に移転します。端末に適用されていた管理プロファイル（MDM）も速やかに解除されますので、その後はご自身で自由に下取り・売却等も行っていただけます。
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終CTAセクション -->
+  <section id="line-cta" class="py-16 md:py-20 bg-gradient-to-br from-brand-900 via-slate-900 to-brand-deep text-white text-center relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="w-16 h-16 rounded-2xl bg-line flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/30">
+        <svg class="w-9 h-9 fill-current text-white" viewBox="0 0 24 24">
+          <path d="M12 2C6.477 2 2 6.03 2 11c0 3.12 1.776 5.882 4.49 7.426.195.111.316.322.316.547l-.15 2.112c-.035.496.486.85.918.625l3.245-1.687a1.05 1.05 0 0 1 .496-.124c.228 0 .454.025.685.025 5.523 0 10-4.03 10-9 0-4.97-4.477-9-10-9z"/>
+        </svg>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-black mb-4">まずはLINEで無料仮審査・在庫確認</h2>
+      <p class="text-slate-300 text-sm sm:text-base mb-8 max-w-xl mx-auto leading-relaxed">
+        友だち追加後、最短30分で分割可能かどうかの目安をお知らせします。<br>
+        「この機種の在庫はある？」「月々いくら？」といったご質問もお気軽にどうぞ。
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <!-- 実際のLINEアカウントURLに差し替えてご使用ください -->
+        <a href="https://line.me/R/ti/p/@dummy" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-line hover:bg-lineDark text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl shadow-emerald-600/30 hover:scale-102 transition-all">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349.002.63.284.63.631 0 .346-.281.628-.63.63H4.635A.632.632 0 0 1 4 10.494c0-.347.281-.629.635-.631h14.73zM12 2C6.477 2 2 6.03 2 11c0 3.12 1.776 5.882 4.49 7.426.195.111.316.322.316.547l-.15 2.112c-.035.496.486.85.918.625l3.245-1.687a1.05 1.05 0 0 1 .496-.124c.228 0 .454.025.685.025 5.523 0 10-4.03 10-9 0-4.97-4.477-9-10-9z"/>
+          </svg>
+          <span>公式LINEを友だち追加する</span>
+        </a>
+      </div>
+
+      <div class="mt-6 text-xs text-slate-400">
+        登録無料 / 強引な営業やセールスは一切行いません
+      </div>
+    </div>
+  </section>
+
+  <!-- 運営者情報・コンプライアンス（信用獲得） -->
+  <section class="py-12 bg-slate-100 border-t border-slate-200 text-slate-600 text-xs">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-slate-900 text-sm mb-4 border-b border-slate-100 pb-2">運営者情報・法的表示</h3>
+        <div class="grid sm:grid-cols-2 gap-4 leading-relaxed">
+          <div>
+            <span class="font-bold text-slate-700 block">サービス名:</span>
+            Step Link（ステップリンク）自社分割スマホ事業部
+          </div>
+          <div>
+            <span class="font-bold text-slate-700 block">古物商許可番号:</span>
+            東京都公安委員会 第000000000000号（※実番号に更新してください）
+          </div>
+          <div>
+            <span class="font-bold text-slate-700 block">販売形態:</span>
+            物品売買契約（割賦販売法に基づく自社割賦販売）
+          </div>
+          <div>
+            <span class="font-bold text-slate-700 block">お問い合わせ:</span>
+            公式LINEまたは専用窓口（平日 10:00 - 19:00）
+          </div>
+        </div>
+        <p class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+          ※Step Linkは貸金業者ではありません。本サービスはスマートフォンの現物売買を目的とした分割払い契約（所有権留保特約付き割賦販売）であり、金銭の貸付や融資を行うものではありません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="py-8 bg-slate-900 text-slate-400 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="mb-2">© Step Link All Rights Reserved.</p>
+      <p class="text-[10px] text-slate-500">Apple、iPhoneは米国および他の国々で登録されたApple Inc.の商標です。</p>
+    </div>
+  </footer>
+
+  <!-- モバイル用固定CTAバー -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 md:hidden shadow-lg">
+    <div class="flex items-center gap-2">
+      <a href="#plans" class="w-1/3 py-3 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs text-center border border-slate-200">
+        端末一覧
+      </a>
+      <a href="#line-cta" class="w-2/3 py-3 rounded-xl bg-line hover:bg-lineDark text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-md shadow-emerald-500/20">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2C6.477 2 2 6.03 2 11c0 3.12 1.776 5.882 4.49 7.426.195.111.316.322.316.547l-.15 2.112c-.035.496.486.85.918.625l3.245-1.687a1.05 1.05 0 0 1 .496-.124c.228 0 .454.025.685.025 5.523 0 10-4.03 10-9 0-4.97-4.477-9-10-9z"/>
+        </svg>
+        <span>LINEで審査申込み</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- インタラクティブスクリプト -->
+  <script>
+    // FAQアコーディオン開閉
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isHidden = content.classList.contains('hidden');
+
+      // 全て閉じる場合はここをアンコメント
+      // document.querySelectorAll('#faq-accordion > div > div').forEach(el => el.classList.add('hidden'));
+      // document.querySelectorAll('.faq-icon').forEach(el => el.textContent = '+');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.textContent = '−';
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.textContent = '+';
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // 端末カテゴリーフィルター
+    function filterDevices(category) {
+      const cards = document.querySelectorAll('.device-card');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      // ボタンのアクティブクラス更新
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.className = "tab-btn active px-4 py-2 rounded-full text-sm font-bold bg-slate-900 text-white shadow-sm transition-all";
+        } else {
+          btn.className = "tab-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-600 hover:bg-slate-200 border border-slate-200 transition-all";
+        }
+      });
+
+      // カードの表示・非表示
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat.includes(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
