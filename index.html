@@ -15,13 +15,6 @@
     .grad-bg {
       background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     }
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px -10px rgba(16, 185, 129, 0.15);
-    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans leading-relaxed selection:bg-emerald-500 selection:text-white">
@@ -34,7 +27,7 @@
       </a>
       <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
         <a href="#recommend" class="hover:text-emerald-600 transition">イチオシ端末</a>
-        <a href="#lineup" class="hover:text-emerald-600 transition">料金・ラインナップ</a>
+        <a href="#pricelist" class="hover:text-emerald-600 transition">料金表一覧</a>
         <a href="#plans" class="hover:text-emerald-600 transition">審査システム</a>
         <a href="#warranty" class="hover:text-emerald-600 transition">ツナグ保証</a>
       </div>
@@ -61,8 +54,7 @@
         <span class="grad-text">新しい選択肢</span>で最新端末を。
       </h1>
       <p class="text-slate-300 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-        従来の枠組みにとらわれない、Step Link独自の完全自社基準プログラム。<br class="hidden md:inline">
-        長期ローンの負担をなくし、半年以内で完済できる安心の仕組みです。<br>
+        長期ローンの負担をなくし、半年以内で完済できる安心の自社分割プログラム。<br>
         手厚い「ツナグ保証」付きで、もしもの時も全力でサポートします。
       </p>
       
@@ -92,23 +84,23 @@
           <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-2">iPhone 13</h2>
           <p class="text-slate-500 text-sm font-semibold mb-6">128GB / 5G対応・シネマティックモード搭載</p>
           
-          <p class="text-slate-700 leading-relaxed mb-8 text-sm md:text-base max-w-2xl mx-auto text-left md:text-center">
-            バッテリー持ちが格段に向上し、圧倒的なカメラ性能を誇るiPhone 13。日常使いからお仕事まで、数年は最前線で活躍する超優秀モデルです。当店の自社分割なら、このハイスペック機も<strong class="text-emerald-600 border-b-2 border-emerald-200">5〜6ヶ月の短期分割</strong>でスマートに手に入ります。
-          </p>
-
-          <div class="bg-slate-50 p-5 md:p-8 rounded-2xl border border-slate-100 mb-8 max-w-md mx-auto text-left">
-            <div class="text-xs font-bold text-slate-500 mb-3">【ご契約の目安】※Sランク適用時の一例</div>
-            <div class="flex justify-between items-center py-3 border-b border-slate-200">
-              <span class="text-slate-600 font-bold">初回 頭金</span>
-              <span class="font-black text-slate-900 text-lg">15,000円〜</span>
+          <div class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100 mb-8 max-w-md mx-auto text-left">
+            <div class="text-xs font-bold text-slate-500 mb-3">【iPhone 13 ご契約詳細】</div>
+            <div class="flex justify-between items-center py-2.5 border-b border-slate-200">
+              <span class="text-slate-600 font-bold text-sm">販売価格</span>
+              <span class="font-black text-slate-900">¥72,000</span>
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-slate-200">
-              <span class="text-slate-600 font-bold">月々のお支払い</span>
-              <span class="text-xl font-black text-emerald-600">約 12,000円<span class="text-xs font-normal text-slate-500"> /月</span></span>
+            <div class="flex justify-between items-center py-2.5 border-b border-slate-200">
+              <span class="text-slate-600 font-bold text-sm">初回頭金</span>
+              <span class="font-black text-slate-900">¥12,000</span>
             </div>
-            <div class="flex justify-between items-center py-3">
-              <span class="text-slate-600 font-bold">分割回数</span>
-              <span class="font-black text-slate-900">5回〜6回完済</span>
+            <div class="flex justify-between items-center py-2.5 border-b border-slate-200">
+              <span class="text-slate-600 font-bold text-sm">月々のお支払い</span>
+              <span class="text-lg font-black text-emerald-600">¥12,000 <span class="text-xs font-normal text-slate-500">× 5回</span></span>
+            </div>
+            <div class="flex justify-between items-center py-2.5">
+              <span class="text-slate-600 font-bold text-sm">審査ランク目安</span>
+              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-700 font-black rounded text-xs">ランク A</span>
             </div>
           </div>
           <a href="apply.html" class="w-full max-w-md mx-auto inline-block text-center grad-bg hover:opacity-90 text-white font-bold py-4 rounded-xl text-base transition shadow-sm">
@@ -119,163 +111,175 @@
     </div>
   </section>
 
-  <!-- 各種ラインナップ & 料金表セクション -->
-  <section id="lineup" class="py-20 px-4 border-t border-slate-200 bg-white">
+  <!-- 全機種料金表セクション -->
+  <section id="pricelist" class="py-20 px-4 bg-white border-t border-slate-200">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-2xl md:text-4xl font-black text-slate-900 mb-3">端末ラインナップ & 料金プラン一覧</h2>
-        <p class="text-slate-600 text-sm md:text-base">最新のiPhone 16からコスパ重視のモデルまで、すべての端末で短期完済プログラムをご用意しています。</p>
+        <h2 class="text-2xl md:text-4xl font-black text-slate-900 mb-3">全取り扱い機種 料金・分割プラン一覧</h2>
+        <p class="text-slate-600 text-sm md:text-base">iPhone 11から最新のiPhone 15シリーズまでの販売価格と分割プランの一覧です。</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <!-- iPhone 16 -->
-        <div class="bg-slate-50 rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between card-hover">
-          <div>
-            <div class="inline-block bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full mb-3">最新フラッグシップ</div>
-            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 16</h3>
-            <p class="text-xs text-slate-500 mb-6">最新機能・ハイスペック</p>
-
-            <div class="bg-white p-4 rounded-2xl border border-slate-200 mb-6 space-y-3 text-xs">
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">頭金目安</span>
-                <span class="font-black text-slate-900 text-sm">30,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">月々のお支払い</span>
-                <span class="font-black text-emerald-600 text-sm">約 22,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-slate-500 font-bold">分割回数</span>
-                <span class="font-black text-slate-900">5〜6回完済</span>
-              </div>
-            </div>
-          </div>
-          <a href="apply.html" class="w-full text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-sm transition">この機種で申し込む</a>
-        </div>
-
-        <!-- iPhone 15 -->
-        <div class="bg-slate-50 rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between card-hover">
-          <div>
-            <div class="inline-block bg-cyan-100 text-cyan-800 text-[10px] font-bold px-3 py-1 rounded-full mb-3">USB-C対応</div>
-            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 15</h3>
-            <p class="text-xs text-slate-500 mb-6">高画素カメラ・快適性能</p>
-
-            <div class="bg-white p-4 rounded-2xl border border-slate-200 mb-6 space-y-3 text-xs">
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">頭金目安</span>
-                <span class="font-black text-slate-900 text-sm">25,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">月々のお支払い</span>
-                <span class="font-black text-emerald-600 text-sm">約 18,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-slate-500 font-bold">分割回数</span>
-                <span class="font-black text-slate-900">5〜6回完済</span>
-              </div>
-            </div>
-          </div>
-          <a href="apply.html" class="w-full text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-sm transition">この機種で申し込む</a>
-        </div>
-
-        <!-- iPhone 14 -->
-        <div class="bg-slate-50 rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between card-hover">
-          <div>
-            <div class="inline-block bg-slate-200 text-slate-700 text-[10px] font-bold px-3 py-1 rounded-full mb-3">安定の高性能</div>
-            <h3 class="text-2xl font-black text-slate-900 mb-1">iPhone 14</h3>
-            <p class="text-xs text-slate-500 mb-6">バランス抜群の人気機</p>
-
-            <div class="bg-white p-4 rounded-2xl border border-slate-200 mb-6 space-y-3 text-xs">
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">頭金目安</span>
-                <span class="font-black text-slate-900 text-sm">20,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">月々のお支払い</span>
-                <span class="font-black text-emerald-600 text-sm">約 15,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-slate-500 font-bold">分割回数</span>
-                <span class="font-black text-slate-900">5〜6回完済</span>
-              </div>
-            </div>
-          </div>
-          <a href="apply.html" class="w-full text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-sm transition">この機種で申し込む</a>
-        </div>
-
-        <!-- iPhone 12 / SE (第3世代) -->
-        <div class="bg-slate-50 rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between card-hover">
-          <div>
-            <div class="inline-block bg-emerald-100 text-emerald-700 text-[10px] font-bold px-3 py-1 rounded-full mb-3">初期費用を抑える</div>
-            <h3 class="text-xl font-black text-slate-900 mb-1">iPhone 12 / SE3</h3>
-            <p class="text-xs text-slate-500 mb-6">コスパ重視・コンパクト</p>
-
-            <div class="bg-white p-4 rounded-2xl border border-slate-200 mb-6 space-y-3 text-xs">
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">頭金目安</span>
-                <span class="font-black text-slate-900 text-sm">10,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <span class="text-slate-500 font-bold">月々のお支払い</span>
-                <span class="font-black text-emerald-600 text-sm">約 9,000円〜</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-slate-500 font-bold">分割回数</span>
-                <span class="font-black text-slate-900">5回完済</span>
-              </div>
-            </div>
-          </div>
-          <a href="apply.html" class="w-full text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-sm transition">この機種で申し込む</a>
-        </div>
-
+      <div class="overflow-x-auto shadow-sm rounded-2xl border border-slate-200">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white text-xs uppercase tracking-wider">
+              <th class="p-4">機種</th>
+              <th class="p-4">販売価格</th>
+              <th class="p-4">初回頭金</th>
+              <th class="p-4">月々分割額</th>
+              <th class="p-4">回数</th>
+              <th class="p-4">支払総額</th>
+              <th class="p-4">審査目安</th>
+              <th class="p-4 text-center">お申し込み</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700 bg-white">
+            <!-- iPhone 11 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 11</td>
+              <td class="p-4 font-semibold">¥36,000</td>
+              <td class="p-4">¥6,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥5,000</td>
+              <td class="p-4">6回</td>
+              <td class="p-4 font-semibold">¥36,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-slate-100 font-bold text-slate-600 rounded text-xs">C</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 12 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 12</td>
+              <td class="p-4 font-semibold">¥60,000</td>
+              <td class="p-4">¥10,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥10,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥60,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-blue-50 font-bold text-blue-600 rounded text-xs">B/C</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 12 Pro -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 12 Pro</td>
+              <td class="p-4 font-semibold">¥75,000</td>
+              <td class="p-4">¥15,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥12,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥75,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-blue-50 font-bold text-blue-600 rounded text-xs">B</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 13 -->
+            <tr class="bg-emerald-50/50 hover:bg-emerald-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 13 <span class="text-[10px] bg-emerald-500 text-white px-2 py-0.5 rounded-full ml-1">イチオシ</span></td>
+              <td class="p-4 font-semibold">¥72,000</td>
+              <td class="p-4">¥12,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥12,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥72,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-emerald-100 font-bold text-emerald-700 rounded text-xs">A</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block grad-bg hover:opacity-90 text-white font-bold text-xs px-3 py-2 rounded-lg transition shadow-sm">選択</a></td>
+            </tr>
+            <!-- iPhone 13 Pro -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 13 Pro</td>
+              <td class="p-4 font-semibold">¥100,000</td>
+              <td class="p-4">¥20,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥16,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥100,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-emerald-100 font-bold text-emerald-700 rounded text-xs">A</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 13 Pro Max -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 13 Pro Max</td>
+              <td class="p-4 font-semibold">¥115,000</td>
+              <td class="p-4">¥25,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥18,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥115,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-emerald-100 font-bold text-emerald-700 rounded text-xs">A</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 14 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 14</td>
+              <td class="p-4 font-semibold">¥100,000</td>
+              <td class="p-4">¥20,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥16,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥100,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-emerald-100 font-bold text-emerald-700 rounded text-xs">A</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 14 Plus -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 14 Plus</td>
+              <td class="p-4 font-semibold">¥115,000</td>
+              <td class="p-4">¥25,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥18,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥115,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-emerald-100 font-bold text-emerald-700 rounded text-xs">A</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 14 Pro -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 14 Pro</td>
+              <td class="p-4 font-semibold">¥135,000</td>
+              <td class="p-4">¥35,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥20,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥135,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-amber-100 font-bold text-amber-700 rounded text-xs">S</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 14 Pro Max -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 14 Pro Max</td>
+              <td class="p-4 font-semibold">¥155,000</td>
+              <td class="p-4">¥45,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥22,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥155,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-amber-100 font-bold text-amber-700 rounded text-xs">S</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 15 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 15</td>
+              <td class="p-4 font-semibold">¥135,000</td>
+              <td class="p-4">¥35,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥20,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥135,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-amber-100 font-bold text-amber-700 rounded text-xs">S</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 15 Pro -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 15 Pro</td>
+              <td class="p-4 font-semibold">¥175,000</td>
+              <td class="p-4">¥50,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥25,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥175,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-amber-100 font-bold text-amber-700 rounded text-xs">S</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+            <!-- iPhone 15 Pro Max -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-4 font-bold text-slate-900">iPhone 15 Pro Max</td>
+              <td class="p-4 font-semibold">¥205,000</td>
+              <td class="p-4">¥65,000</td>
+              <td class="p-4 text-emerald-600 font-bold">¥28,000</td>
+              <td class="p-4">5回</td>
+              <td class="p-4 font-semibold">¥205,000</td>
+              <td class="p-4"><span class="px-2 py-0.5 bg-amber-100 font-bold text-amber-700 rounded text-xs">S</span></td>
+              <td class="p-4 text-center"><a href="apply.html" class="inline-block bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg transition">選択</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-  </section>
-
-  <!-- 審査ランクと料金体系 -->
-  <section id="plans" class="py-20 px-4 max-w-6xl mx-auto border-t border-slate-100">
-    <div class="text-center mb-16">
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-3">独自の審査ランクと料金体系</h2>
-      <p class="text-slate-600 text-sm md:text-base max-w-2xl mx-auto">
-        Step Linkでは、お客様の現在のご状況に合わせた「S・A・B・C」の審査ランクを設け、<br class="hidden md:inline">
-        それぞれに最適な頭金・保証内容・ご案内可能機種を設定しております。
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <!-- ランクS〜A -->
-      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-black text-xl">S/A</div>
-          <h3 class="text-xl font-bold">スタンダードプラン</h3>
-        </div>
-        <p class="text-sm text-slate-600 mb-4">お仕事が安定している方向けのベーシックなプラン。最新のiPhone 16〜14シリーズも、初期費用を抑えてスムーズにご案内可能です。</p>
-        <ul class="text-sm space-y-2 text-slate-700 bg-slate-50 p-4 rounded-xl">
-          <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>対象機種:</strong> iPhone 16, 15, 14, 13 等</li>
-          <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>頭金目安:</strong> 15,000円〜30,000円程度（機種による）</li>
-          <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>分割回数:</strong> 5〜6回</li>
-        </ul>
-      </div>
-
-      <!-- ランクB〜C -->
-      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-black text-xl">B/C</div>
-          <h3 class="text-xl font-bold">手厚い保証・サポートプラン</h3>
-        </div>
-        <p class="text-sm text-slate-600 mb-4">お仕事に就いたばかりの方や、これから新しいスタートを切る方向け。少し厚めの頭金設定と手厚い「ツナグ保証」をセットにし、安心して始められます。</p>
-        <ul class="text-sm space-y-2 text-slate-700 bg-slate-50 p-4 rounded-xl">
-          <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>対象機種:</strong> iPhone 13, iPhone 12, SE 等</li>
-          <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>頭金目安:</strong> 10,000円〜20,000円程度</li>
-          <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>分割回数:</strong> 5回</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="bg-slate-800 text-white p-6 rounded-2xl text-center text-sm">
-      ※上記は一例です。具体的な金額（頭金・月額）は、LINEでのヒアリング後にご提案いたします。<br>
-      ※皆様に安心してご利用いただくための取り組みとして、全端末に最新のデバイス管理システム（MDM）を導入しております。
     </div>
   </section>
 
@@ -286,34 +290,25 @@
         <div class="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-1 rounded-full mb-3">安心のデバイス補償</div>
         <h2 class="text-3xl font-black mb-4">ずっと寄り添う保守体制「ツナグ保証」</h2>
         <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
-          分割期間中の自然故障や落下破損から端末を守る専用プログラム。<br>
-          万が一のトラブル時も、手厚いサポートで安心してご利用いただけます。
+          分割期間中の自然故障や落下破損から端末を守る専用プログラムです。
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl">
           <div class="text-emerald-400 text-2xl mb-4"><i class="fas fa-wrench"></i></div>
-          <h3 class="text-lg font-bold mb-2">自然故障・動作不良に対応</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            急な電源トラブル、タッチ不良、スピーカーの故障など、通常使用時のトラブルを即座にカバー。専任スタッフが迅速に対応します。
-          </p>
+          <h3 class="text-lg font-bold mb-2">自然故障に対応</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">急な電源トラブルや動作不良などを迅速にカバーします。</p>
         </div>
-
         <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl">
           <div class="text-emerald-400 text-2xl mb-4"><i class="fas fa-shield-virus"></i></div>
           <h3 class="text-lg font-bold mb-2">落下・画面破損もサポート</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            うっかり落として画面が割れてしまった場合も、所定のお客様自己負担金のみで迅速に同等品への交換・修理対応が可能です。
-          </p>
+          <p class="text-xs text-slate-400 leading-relaxed">うっかり画面が割れてしまった場合も安心のサポート対応。</p>
         </div>
-
         <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl">
           <div class="text-emerald-400 text-2xl mb-4"><i class="fas fa-sync-alt"></i></div>
           <h3 class="text-lg font-bold mb-2">完済後の継続サブスク</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            端末代金を完済したあとも、ご希望に合わせて少額の月額制で保証のみを継続可能。長く大切に端末をお使いいただけます。
-          </p>
+          <p class="text-xs text-slate-400 leading-relaxed">完済後も少額で保証のみを継続し、長く大切にお使いいただけます。</p>
         </div>
       </div>
     </div>
@@ -329,23 +324,23 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
         <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-sm mx-auto mb-4">1</div>
-        <h3 class="font-bold text-base mb-2">お申し込み・ご相談</h3>
-        <p class="text-xs text-slate-500">当サイトのWEBフォームから申し込むか、公式LINEを追加してご相談ください。</p>
+        <h3 class="font-bold text-base mb-2">お申し込み</h3>
+        <p class="text-xs text-slate-500">当サイトのWEBフォームからお申し込みください。</p>
       </div>
       <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
         <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-sm mx-auto mb-4">2</div>
         <h3 class="font-bold text-base mb-2">独自審査・ご提案</h3>
-        <p class="text-xs text-slate-500">お申し込み内容をもとに自社基準で審査を行い、最適な分割プランをご提示します。</p>
+        <p class="text-xs text-slate-500">内容をもとに自社基準で審査を行いプランをご提示します。</p>
       </div>
       <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
         <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-sm mx-auto mb-4">3</div>
-        <h3 class="font-bold text-base mb-2">ご契約・初期費用入金</h3>
-        <p class="text-xs text-slate-500">合意したプランの頭金を指定口座へご入金いただきます。着金確認後、発送準備へ。</p>
+        <h3 class="font-bold text-base mb-2">頭金ご入金</h3>
+        <p class="text-xs text-slate-500">指定口座へ頭金をご入金いただきます。</p>
       </div>
       <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
         <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-sm mx-auto mb-4">4</div>
         <h3 class="font-bold text-base mb-2">端末のお届け</h3>
-        <p class="text-xs text-slate-500">厳格な検品をクリアした端末が到着。お手持ちのSIMカードを挿してすぐにご利用可能です。</p>
+        <p class="text-xs text-slate-500">検品済みの端末を迅速にお届けします。</p>
       </div>
     </div>
   </section>
@@ -354,7 +349,6 @@
   <section class="py-20 px-4 bg-slate-900 text-white text-center">
     <div class="max-w-2xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-black mb-6">さあ、新しいスマートフォンを手にしよう</h2>
-      
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="apply.html" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white text-base md:text-lg font-bold px-10 py-4 rounded-full shadow-lg transition flex items-center justify-center gap-2">
           <i class="fas fa-edit"></i>
@@ -376,11 +370,9 @@
         <p class="text-slate-500">スマートフォン独自分割プログラム & ツナグ保証</p>
       </div>
       <div class="flex flex-wrap justify-center gap-6 text-slate-300">
-        <a href="terms.html" class="hover:text-white transition">重要事項説明書・利用規約</a>
+        <a href="terms.html" class="hover:text-white transition">利用規約</a>
         <a href="privacy.html" class="hover:text-white transition">プライバシーポリシー</a>
-        <a href="mailto:steplink.mobile@gmail.com" class="hover:text-white transition flex items-center gap-1.5">
-          <i class="far fa-envelope"></i> steplink.mobile@gmail.com
-        </a>
+        <a href="mailto:steplink.mobile@gmail.com" class="hover:text-white transition">steplink.mobile@gmail.com</a>
       </div>
     </div>
     <div class="max-w-6xl mx-auto px-4 mt-8 pt-8 border-t border-slate-900 text-center text-slate-600">
